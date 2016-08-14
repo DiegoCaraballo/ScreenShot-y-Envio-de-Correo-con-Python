@@ -61,7 +61,7 @@ def mail():
 	# inicializamos el stmp para hacer el envio
 	server = smtplib.SMTP(smtp_server)
 	server.starttls()
-	#logeamos con los datos ya seteamos en la parte superior
+	#logeamos con los datos ya seteados en la parte superior
 	server.login(smtp_user,smtp_pass)
 	#el envio
 	server.sendmail(addr_from, addr_to, msg.as_string())

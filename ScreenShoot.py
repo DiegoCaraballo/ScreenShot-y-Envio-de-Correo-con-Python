@@ -34,7 +34,7 @@ def mail():
 	# Define SMTP email server details
 	smtp_server = 'smtp.gmail.com:587'
 	smtp_user   = 'pythondiario@gmail.com'
-	smtp_pass   = 'rocconauta2'
+	smtp_pass   = '************'
 	 
 	# Construimos el mail
 	msg = MIMEMultipart() 
@@ -67,7 +67,7 @@ def mail():
 	server.sendmail(addr_from, addr_to, msg.as_string())
 	#apagamos conexion stmp
 	server.quit()
-	
+	#esto lo puse para saber que llegaba hasta aca y salia el correo
 	print "Se envió el correo"
 
 
@@ -79,7 +79,7 @@ def main():
 		# Enviamos el correo
 		mail()
 		# Tiempo en segundos entre re-envios
-		time.sleep(5)
+		time.sleep(60)
 
 main()
 
